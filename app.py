@@ -4,13 +4,13 @@ from dotenv import load_dotenv
 import streamlit as st
 import os
 from PIL import Image
-## Configure Genai Key
+
 
 
 
 load_dotenv() ## load all environment variables from .env
-
-genai.configure(os.getenv('GOOGLE_API_KEY'))
+## Configure Genai Key
+genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
 
 def get_gemini_response(image,input):
